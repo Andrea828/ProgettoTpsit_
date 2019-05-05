@@ -6,10 +6,10 @@ int sensorValue = 0;
 
 // put your setup code here, to run once:
 void setup() {
-  Serial.begin(9600);
-  pinMode(analogInPin, INPUT);
+  Serial.begin(9600); 
+  pinMode(analogInPin, INPUT); // Pin 'A0' in modalità 'INPUT'
 
-  pinMode(13, OUTPUT);
+  pinMode(13, OUTPUT); // Pin collegato al led in modalità 'OUTPUT'
 
 }
 
@@ -17,11 +17,11 @@ void setup() {
 void loop() {
   sensorValue = analogRead(analogInPin);
   Serial.println(sensorValue);
-  if(sensorValue > 550) {  // se il sensore del valore è maggiore di 550 il led resta spento
-    digitalWrite(13, LOW);  //il LED si spegne
+  if(sensorValue > 550) {  // se il valore del sensore è maggiore di 550 il led resta spento
+    digitalWrite(13, LOW);  // il LED si spegne
   }
   else {
     digitalWrite(13, HIGH); // se è minore di 550 il led si accende
   }
-  delay(1000);
+  delay(1000); 
 }
