@@ -67,7 +67,7 @@ namespace progettoTpsit
             {
                 //creo il file
                 StreamWriter sw = new StreamWriter("C:\\Users\\andre_000\\Desktop\\text.txt");
-                int tmp;
+                int tmp;    // creazione variabile di supporto
                 foreach(string i in lista) //scorro la lista
                 {
                     tmp = Convert.ToInt32(i); //variabile di supporto
@@ -85,9 +85,9 @@ namespace progettoTpsit
                 //chiudo il file
                 sw.Close();
             }
-            catch (Exception e)
+            catch (Exception e)  //gestione eccezioni
             {
-                Console.WriteLine("Exception: " + e.Message);
+                Console.WriteLine("Exception: " + e.Message);  
             }
             finally
             {
