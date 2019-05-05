@@ -66,7 +66,7 @@ namespace progettoTpsit
             try
             {
                 //creo il file
-                StreamWriter sw = new StreamWriter("C:\\Users\\andre_000\\Desktop\\text.txt");
+                StreamWriter sw = new StreamWriter("C:../../../text.txt"); //percorso che può variare a seconda delle esigenze
                 int tmp;    // creazione variabile di supporto
                 foreach(string i in lista) //scorro la lista
                 {
