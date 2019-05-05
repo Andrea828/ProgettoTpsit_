@@ -18,7 +18,7 @@ void loop() {
   sensorValue = analogRead(analogInPin);
   Serial.println(sensorValue);
   if(sensorValue > 550) {  // se il sensore del valore è maggiore di 550 il led resta spento
-    digitalWrite(13, LOW);
+    digitalWrite(13, LOW);  //il LED si spegne
   }
   else {
     digitalWrite(13, HIGH); // se è minore di 550 il led si accende
