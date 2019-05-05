@@ -1,0 +1,14 @@
+C:\Users\andre_000\source\repos\progettoTpsit\progettoTpsit\bin\Debug\progettoTpsit.exe.config
+C:\Users\andre_000\source\repos\progettoTpsit\progettoTpsit\bin\Debug\progettoTpsit.exe
+C:\Users\andre_000\source\repos\progettoTpsit\progettoTpsit\bin\Debug\progettoTpsit.pdb
+C:\Users\andre_000\source\repos\progettoTpsit\progettoTpsit\obj\Debug\progettoTpsit.csprojAssemblyReference.cache
+C:\Users\andre_000\source\repos\progettoTpsit\progettoTpsit\obj\Debug\progettoTpsit.csproj.CoreCompileInputs.cache
+C:\Users\andre_000\source\repos\progettoTpsit\progettoTpsit\obj\Debug\progettoTpsit.exe
+C:\Users\andre_000\source\repos\progettoTpsit\progettoTpsit\obj\Debug\progettoTpsit.pdb
+C:\Users\andre_000\Desktop\progettoTpsit\progettoTpsit\bin\Debug\progettoTpsit.exe.config
+C:\Users\andre_000\Desktop\progettoTpsit\progettoTpsit\bin\Debug\progettoTpsit.exe
+C:\Users\andre_000\Desktop\progettoTpsit\progettoTpsit\bin\Debug\progettoTpsit.pdb
+C:\Users\andre_000\Desktop\progettoTpsit\progettoTpsit\obj\Debug\progettoTpsit.csprojAssemblyReference.cache
+C:\Users\andre_000\Desktop\progettoTpsit\progettoTpsit\obj\Debug\progettoTpsit.csproj.CoreCompileInputs.cache
+C:\Users\andre_000\Desktop\progettoTpsit\progettoTpsit\obj\Debug\progettoTpsit.exe
+C:\Users\andre_000\Desktop\progettoTpsit\progettoTpsit\obj\Debug\progettoTpsit.pdb
