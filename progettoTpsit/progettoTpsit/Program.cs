@@ -12,34 +12,34 @@ namespace progettoTpsit
 
     class Program
     {
-        private static List<string> lista = new List<string>();
+        private static List<string> lista = new List<string>();  // lista di supporto
         static SerialPort porta1 = new SerialPort("/dev/usb0", 9600); // porta seriale dove arduino è collegato
-        static string valore = ""; 
+        static string valore = ""; //variabile condivisa
         
 
         static void Main(string[] args)
         {
-            Thread leggi = new Thread(new ThreadStart(LeggiPorta));
-            Thread scrivi = new Thread(new ThreadStart(Scrivi));
+            Thread leggi = new Thread(new ThreadStart(LeggiPorta)); // primo thread
+            Thread scrivi = new Thread(new ThreadStart(Scrivi));    // secondo thread
             
-            leggi.Start();
-            scrivi.Start();
+            leggi.Start(); // start primo thread
+            scrivi.Start(); // start secondo thread
 
-            gestisciFile();
+            gestisciFile();  // gestione finale del file dove viene scritto in un file
 
             Console.ReadKey();
         }
 
-        static void LeggiPorta() 
+        static void LeggiPorta() // legge la porta dell'arduino
         {
-            porta1.Open();
-            string stringa = porta1.ReadExisting();
+            porta1.Open(); // porta aperta
+            string stringa = porta1.ReadExisting(); // salvo su stringa valore letto
 
             lock (valore) {
                 valore = stringa;
             }
 
-            Thread.Sleep(1500); 
+            Thread.Sleep(1500); // aspetto 1,5 secondi
         }
 
         static void Scrivi() //riempie una lista
@@ -51,39 +51,38 @@ namespace progettoTpsit
                 try
                 {
                     //string str = porta1.ReadExisting(); 
-                    Console.Write(str);
-                    lista.Add(str);
+                    Console.Write(str); // scrive sulla console i valori
+                    lista.Add(str); // aggiunge i valori alla lista con Add
                 }
                 catch (Exception) { }
                 
             }
 
-            Thread.Sleep(1500);
+            Thread.Sleep(1500); // aspetta 1,5 secondi
         }
 
-        public static void gestisciFile()
+        public static void gestisciFile() // scrive su file
         {
             try
             {
-
-                //Pass the filepath and filename to the StreamWriter Constructor
+                //creo il file
                 StreamWriter sw = new StreamWriter("C:\\Users\\andre_000\\Desktop\\text.txt");
                 int tmp;
-                foreach(string i in lista)
+                foreach(string i in lista) //scorro la lista
                 {
-                    tmp = Convert.ToInt32(i);
-                    //Write a line of text
-                    if( tmp > 550)
+                    tmp = Convert.ToInt32(i); //variabile di supporto
+                   
+                    if( tmp > 550) // se il valore della fotoresistenza è maggiore di 550 il led resta spento sennò si accende
                     {
                         sw.Write("Periodo: giorno,  " +  "luce:  " + i + ", luce giardino: spenta");
                     } else
                     {
                         sw.Write("Periodo: notte,  " + "luce:  " + i + ", luce giardino: accesa");
                     }
-                    sw.Write(i);
+                    sw.Write(i); //scrivo su file
                 }
         
-                //Close the file
+                //chiudo il file
                 sw.Close();
             }
             catch (Exception e)
